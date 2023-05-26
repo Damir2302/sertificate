@@ -1,0 +1,67 @@
+.section-hero {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 65% 50%;
+    position: relative;
+    height: 100vh;
+    min-height: 650px;
+    max-height: 900px;
+
+    @include breakpoint(lg) {
+        background-position: top;
+    }
+}
+
+.section-hero::before {
+    content: '';
+    background: linear-gradient(180deg, #061F51 0%, rgba(6, 31, 81, 0) 17.15%), linear-gradient(180deg, rgba(6, 31, 81, 0) 16.25%, rgba(6, 31, 81, 0.91) 73.82%), linear-gradient(90deg, #061F51 0%, rgba(6, 31, 81, 0.12) 50.52%, #061F51 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.section-hero .container {
+    height: 100%;
+}
+
+.hero {
+    padding: 170px 0 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 495px;
+    height: 100%;
+    color: #fff;
+}
+
+.hero__title p {
+    margin-bottom: 22px;
+    font-size: 20px;
+    line-height: 140%;
+    opacity: 0.7;
+}
+
+.hero__action {
+    margin-top: auto;
+}
+
+.hero__action p {
+    margin-bottom: 42px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero__action b {
+    color: #fff;
+}
+
+.hero__action .btn {
+    width: 221px;
+}
+
+.hero__btn {
+    margin-bottom: 20px;
+}

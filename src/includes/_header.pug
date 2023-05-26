@@ -1,0 +1,58 @@
+include _mixins
+block header
+
+    header#header.header 
+
+        .container
+
+            .header__inner
+
+                .header__logo
+                    a(href="/")
+                        img(src="assets/images/logo.svg", alt="logo")
+
+                nav.nav#nav
+
+                    .header__logo
+                        a(href="/")
+                            img(src="assets/images/logo.svg", alt="logo")
+
+                    .header__nav
+                        .header__nav-link(class= bodyClass == 'about-page' ? 'active' : '')
+                            a(href="about.html") О компании
+                        .header__nav-link(class= bodyClass == 'services-page' ? 'active' : '')
+                            a(href="services.html") Услуги
+                        .header__nav-link(class= bodyClass == 'news-page' ? 'active' : '')
+                            a(href="news.html") Новости
+                        .header__nav-link(class= bodyClass == 'contacts-page' ? 'active' : '')
+                            a(href="contacts.html") Контакты
+
+                    .header__search
+                        .search-btn
+                            i.fal.fa-search
+                            p Поиск
+                    
+                    .header__contacts
+                        .header__contacts-item.header__contacts-email
+                            i.fal.fa-envelope
+                            a(href="mailto:info@e-s-u.ru") info@e-s-u.ru
+
+                        .header__contacts-item.header__contacts-ask
+                            i.fal.fa-comments
+                            p Задать вопрос
+
+                        .header__contacts-item.header__contacts-phone
+                            i.fal.fa-phone
+                            a(href="tel:8 (495) 181 00 16") 8 (495) 181 00 16
+
+                .header__text
+                    p Сертификация продукции и Услуги
+                    p Свидетельства и заключения
+                    p Лицензирование деятельности
+                    p Регистрация
+                    p Декларирование продукции
+                    p Разработка тех документации
+                    p Отказные письма
+                    p Технические регламенты
+
+                .header__menu#menu
