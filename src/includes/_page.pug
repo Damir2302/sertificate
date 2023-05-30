@@ -34,6 +34,92 @@ html(lang="ru")
                 include _footer
             // Footer::End
 
+        // Search-popup::Start
+        .search-form.animate__animated.animate__fadeIn#search 
+            .search-form-wrap
+                form
+                    label Поиск по сайту
+                    .search-form-input
+                        input(type="search", name="search" placeholder="Поиск" autocomplete="off")
+                        button(type="submit")
+                            i.fal.fa-search
+                            p Искать
+            .search-close
+        // Search-popup::End
+
+        // Popup-Callback::Start
+        .popup-form#popup-callback
+
+            .form-container
+
+                .form-info
+                    .form-info__title Заказать консультацию
+                    .form-info__subtitle Воспользуйтесь формой , чтобы задать ваш вопрос, оставить предложение или отзыв.
+
+                .form
+                    form
+                        .input-style
+                            label Ваше имя
+                            input(type="text" placeholder="Представьтесь" autocomplete="off" required)
+                        
+                        .input-style
+                            label Телефон
+                            input(type="tel" required autocomplete="off")
+                        
+                        .agreement.checkbox-style
+                            input#agreement(type="checkbox" name="agreement" checked)
+                            label(for="agreement")
+                                span Даю согласие на обработку <a href="#">персональных данных</a>
+
+                        button.btn(type="submit") Отправить данные
+        // Popup-Callback::End
+
+        // Popup-Callback::Start
+        .popup-form#popup-questions
+
+            .form-container
+
+                .form-info
+                    .form-info__title Остались вопросы?
+                    .form-info__subtitle Воспользуйтесь формой , чтобы задать ваш вопрос, оставить предложение или отзыв.
+
+                .form
+                    form
+                        .form-wrap
+                            .form-block
+                                .input-style
+                                    label Ваше имя
+                                    input(type="text" placeholder="Представьтесь" autocomplete="off" required)
+                                
+                                .input-style
+                                    label Телефон
+                                    input(type="tel" required autocomplete="off")
+                                
+                                .input-style
+                                    label E-mail
+                                    input(type="email" required autocomplete="off" placeholder="Введите ваш E-mail")
+                            
+                            .form-block
+                                .textarea-style
+                                    label Вопрос
+                                    textarea(placeholder="Введите текст" required)
+
+                                .agreement.checkbox-style
+                                    input#agreement_2(type="checkbox" name="agreement_2" checked)
+                                    label(for="agreement_2")
+                                        span Даю согласие на обработку <a href="#">персональных данных</a>
+
+                                button.btn(type="submit") Отправить данные
+        // Popup-Callback::End
+
+        // Popup-Success::Start
+        .popup-form#popup-success
+
+            .popup-form__title Спасибо
+            p.popup-form__text Ваша заявка отправлена
+            button.btn(type="submit" tabindex="0") Вернуться на сайт
+        // Popup-Success::End
+
         // Scripts::Start
         include _loadScripts
         // Scripts::End

@@ -1,5 +1,10 @@
 .header {
-    padding-top: 30px;
+    padding: 30px 0;
+    transition: all .3s ease;
+
+    @include breakpoint(xl) {
+        padding: 14px 0;
+    }
 
     .main-page & {
         position: fixed;
@@ -10,34 +15,101 @@
     }
 }
 
+.header.header-fixed {
+    padding: 15px 0;
+    background: #fff;
+    top: -105px;
+}
+
+.header.header-backscroll {
+    top: 0;
+}
+
 .header__inner {
-    display: flex;
-    justify-content: space-between;
+    
+    @include breakpointMax(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        display: grid;
+        grid-template-areas: "a b b"
+                             "c c c";
+    }
+
+    @include breakpoint(xl) {
+        grid-template-areas: "a b b"
+                             "a c c";
+    }
+
+    .header-fixed & {
+        
+        @include breakpoint(lg) {
+            grid-template-areas: "a b b";
+            align-items: center;
+        }
+    }
 }
 
 .header__logo {
     width: 90px;
 
+    @include breakpoint(lg) {
+        grid-area: a;
+    }
+
+    @include breakpoint(xl) {
+        width: 154px;
+    }
+
     .nav & {
+        margin-left: 22px;
 
         @include breakpoint(lg) {
             display: none;
         }
     }
+
+    .header-fixed & {
+        width: 75px;
+    }
 }
 
 .nav {
-    padding: 28px 22px;
-    background: #fff;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    display: flex;
-    flex-direction: column;
-    width: 304px;
-    height: 100%;
-    transition: all .4s ease;
-    overflow-y: scroll;
+    
+    @include breakpointMax(lg) {
+        padding: 28px 0 22px;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        width: 304px;
+        height: 100%;
+        transition: all .4s ease;
+        overflow-y: scroll;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+        grid-area: b;
+        display: flex;
+        color: #fff;
+        border-bottom: 1px solid #ABB8D0;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 0;
+        padding-bottom: 12px;
+    }
+
+    .header-fixed & {
+        padding-bottom: 0;
+        color: #222;
+        border: none;
+    }
 }
 
 .nav::-webkit-scrollbar {
@@ -49,27 +121,72 @@
 }
 
 .header__nav {
-    margin-top: 58px;
+   
+    @include breakpointMax(lg) {
+        margin-top: 58px;
+    }
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
 }
 
 .header__nav-link {
-    padding: 15px 0;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 130%;
-    text-transform: uppercase;
-    color: #2F444E;
-    border-bottom: 1px solid #E2E2E2;
+    
+    @include breakpointMax(lg) {
+        padding: 15px 22px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2F444E;
+        border-bottom: 1px solid #E2E2E2;
+    }
+
+    @include breakpoint(lg) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.header__nav-link ~ .header__nav-link {
+    
+    @include breakpoint(lg) {
+        margin-left: 16px;
+    }
 }
 
 .header__search {
-    padding: 15px 0;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 130%;
-    text-transform: uppercase;
-    color: #2F444E;
-    border-bottom: 1px solid #E2E2E2;
+    
+    @include breakpointMax(lg) {
+        padding: 15px 22px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #2F444E;
+        border-bottom: 1px solid #E2E2E2;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: auto;
+        position: relative;
+    }
+}
+
+.header__search::after {
+
+    @include breakpoint(lg) {
+        content: '';
+        background: #ABB8D0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 1px;
+        height: 24px;
+    }
 }
 
 .search-btn {
@@ -77,14 +194,161 @@
     align-items: center;
     cursor: pointer;
     user-select: none;
+
+    @include breakpoint(lg) {
+        padding-right: 10px;
+    }
+    
+    @include breakpoint(xl) {
+        padding-right: 20px;
+    }
+}
+
+.header__search i {
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+        color: #c4a43b;
+    }
 }
 
 .header__search p {
     margin-left: 15px;
+
+    @include breakpoint(lg) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.search-form {
+    position: fixed;
+    top: 140px;
+    left: 0;
+    display: none;
+    width: 100%;
+    z-index: 10;
+
+    @include breakpoint(lg) {
+        top: 155px;
+    }
+}
+
+.search-form.active {
+    display: block;
+}
+
+.search-close::after {
+    background: #FFFFFF;
+    position: absolute;
+    top: calc(100% + 48px);
+    left: calc(50% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-family: $icon;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1;
+    border: 1px solid #E2E2E2;
+    border-radius: 100px;
+    cursor: pointer;
+
+    @include breakpoint(lg) {
+        top: calc(100% + 150px);
+    }
+
+    .search-form.active & {
+        content: '\f00d';
+    }
+}
+
+.search-form-wrap {
+    padding: 17px 16px 41px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    height: 140px;
+
+    @include breakpoint(lg) {
+        margin: 0 auto;
+        padding: 17px 32px 27px;
+        height: 125px;
+        max-width: 850px;
+    }
+}
+
+.search-form label {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    text-transform: math-auto;
+
+    @include breakpoint(lg) {
+        margin-bottom: 12px;
+    }
+}
+
+.search-form-input {
+    display: flex;
+}
+
+.search-form-input input {
+    padding: 11px 25px;
+    background: #FFFFFF;
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 3px;
+}
+
+.search-form-input button {
+    margin-left: 12px;
+    background: #C4A43B;
+    flex-shrink: 0;
+    width: 50px;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    border-radius: 3px;
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+        width: 173px;
+    }
+}
+
+.search-form-input i {
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.search-form-input p {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
 }
 
 .header__contacts {
     margin-top: 150px;
+    padding-left: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        padding-left: 0;
+        flex-direction: row;
+    }
 }
 
 .header__contacts-item {
@@ -93,10 +357,21 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+
+    @include breakpoint(lg) {
+        margin-left: 10px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 20px;
+    }
 }
 
 .header__contacts-item ~ .header__contacts-item {
-    margin-top: 20px;
+    
+    @include breakpointMax(lg) {
+        margin-top: 20px;
+    }
 }
 
 .header__contacts-item i {
@@ -105,10 +380,63 @@
     font-size: 14px;
     line-height: 18px;
     color: #C4A43B;
+
+    @include breakpoint(lg) {
+        width: auto;
+        line-height: 20px;
+    }
+}
+
+.header__contacts-item p {
+    cursor: pointer;
 }
 
 .header__text {
-    display: none;
+    
+    @include breakpointMax(lg) {
+        display: none;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 8px;
+        margin-left: -15px;
+        grid-area: c;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: 58px;
+        color: #fff;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 18px;
+    }
+
+    .header-fixed & {
+        display: none;
+    }
+}
+
+.header__text p {
+
+    @include breakpoint(lg) {
+        margin-top: 12px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+.header__text p::before {
+    content: '';
+    margin-right: 16px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #C4A43B;
 }
 
 .header__menu {
@@ -124,6 +452,14 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color .4s ease;
+
+    .header-fixed & {
+        color: #000;
+    }
+
+    @include breakpoint(lg) {
+        display: none;
+    }
 }
 
 .header__menu.active {

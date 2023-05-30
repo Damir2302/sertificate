@@ -4,23 +4,37 @@ $(document).ready(function () {
     $("html").on("click", function (e) {
         if (
             !$(e.target).closest("#menu").length &&
-            !$(e.target).closest("#nav").length
+            !$(e.target).closest("#nav").length &&
+            !$(e.target).closest("#search form").length 
         ) {
             $("body").removeClass("overflow-hidden")
             $('#page').removeClass('bg-overlay')
+            $('#page').removeClass('z-index-10')
 
             $('#menu').removeClass('active')
             $('#nav').removeClass('active')
+
+            $('#search').removeClass('active')
+            $('#search input').val('')
         }
     });
 
     $('#menu').on('click', function() {
-        $(this).toggleClass('active')
+        if (!$(this).hasClass('active')) {
+            $(this).addClass('active')
 
-        $('#nav').toggleClass('active')
+            $('#nav').addClass('active')
 
-        $("body").toggleClass("overflow-hidden")
-        $('#page').toggleClass('bg-overlay')
+            $("body").addClass("overflow-hidden")
+            $('#page').addClass('bg-overlay')
+        } else {
+            $(this).removeClass('active')
+
+            $('#nav').removeClass('active')
+
+            $("body").removeClass("overflow-hidden")
+            $('#page').removeClass('bg-overlay')
+        }
     })
 
     $('#nav .btn-style').on('click', function() {
@@ -31,7 +45,29 @@ $(document).ready(function () {
         $('#menu').removeClass('active')
     })
 
-    $('#popup-success .btn-style').on('click', function() {
+    $('.search-btn').on('click', function() {
+        $('#search').toggleClass('active')
+        $('#search input').focus()
+
+        $("body").addClass("overflow-hidden")
+        $('#page').addClass('bg-overlay')
+        $('#page').addClass('z-index-10')
+        
+        $('#menu').removeClass('active')
+        $('#nav').removeClass('active')
+    })
+
+    $('.search-close').on('click', function() {
+        $('#search').removeClass('active')
+
+        $('#search input').val('')
+
+        $("body").removeClass("overflow-hidden")
+        $('#page').removeClass('bg-overlay')
+        $('#page').removeClass('z-index-10')
+    })
+
+    $('#popup-success .btn').on('click', function() {
         $('.is-close').trigger('click')
     })
 

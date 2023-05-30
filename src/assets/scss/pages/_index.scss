@@ -5,7 +5,7 @@
     position: relative;
     height: 100vh;
     min-height: 650px;
-    max-height: 900px;
+    max-height: 920px;
 
     @include breakpoint(lg) {
         background-position: top;
@@ -35,6 +35,25 @@
     max-width: 495px;
     height: 100%;
     color: #fff;
+
+    @include breakpoint(lg) {
+        padding-top: 240px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 140px;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        max-width: unset;
+    }
+}
+
+.hero__title {
+
+    @include breakpoint(xl) {
+        max-width: 540px;
+    }
 }
 
 .hero__title p {
@@ -42,26 +61,96 @@
     font-size: 20px;
     line-height: 140%;
     opacity: 0.7;
+
+    @include breakpoint(lg) {
+        margin-bottom: 45px;
+    }
 }
 
 .hero__action {
     margin-top: auto;
+
+    @include breakpoint(xl) {
+        margin-top: 0;
+    }
 }
 
 .hero__action p {
     margin-bottom: 42px;
     line-height: 140%;
     color: rgba(255, 255, 255, 0.7);
+
+    @include breakpoint(lg) {
+        max-width: 448px;
+        font-size: 20px;
+    }
 }
 
 .hero__action b {
     color: #fff;
 }
 
-.hero__action .btn {
+.hero__buttons {
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.hero__buttons .btn {
     width: 221px;
+
+    @include breakpoint(xl) {
+        width: 225px;
+    }
 }
 
 .hero__btn {
     margin-bottom: 20px;
+
+    @include breakpoint(lg) {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 32px;
+    }
+}
+
+.section-about {
+    padding: 60px 0;
+}
+
+.about {
+    
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.about__image {
+    margin-bottom: 26px;
+    border: 5px solid #C4A43B;
+
+    @include breakpoint(md) {
+        margin-bottom: 0;
+        width: calc(50% - 50px);
+    }
+}
+
+.about__image img {
+
+    @include breakpoint(md) {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about__text {
+
+    @include breakpoint(md) {
+        width: calc(50% - 50px);
+    }
 }
