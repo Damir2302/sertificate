@@ -1,5 +1,10 @@
 .fancybox__slide {
+    padding-top: 8px;
     cursor: default!important;
+
+    @include breakpoint(lg) {
+        padding: 0 30px;
+    }
 }
 
 .popup-form {
@@ -47,6 +52,7 @@
         width: 100%;
         max-width: 420px;
     }
+    
 }
 
 .form-info__title {
@@ -163,12 +169,12 @@
     margin-top: 15px;
     padding: 24px;
     background: #A0915F;
-    width: 306px;
+    width: 100%;
     font-size: 16px;
     line-height: 140%;
 }
 
-#popup-questions {
+.popup-questions {
 
     @include breakpoint(xl) {
         padding: 50px;
@@ -178,10 +184,25 @@
         padding: 50px 65px;
     }
 
+    .form-info {
+
+        @include breakpoint(lg) {
+            width: calc(50% - 17.2rem);
+        }
+
+        @include breakpoint(xl) {
+            width: 278px;
+        }
+    }
+
     .form {
 
         @include breakpointAnd($lg, $xl) {
-            width: 50%;
+            width: calc(50% + 127px);
+        }
+
+        @include breakpoint(xl) {
+            width: 100%;
         }
     }
 
@@ -194,15 +215,22 @@
 
     .form-wrap {
         
-        @include breakpoint(xl) {
+        @include breakpoint(lg) {
             display: flex;
+        }
+    }
+
+    .form-block {
+
+        @include breakpoint(lg) {
+            width: 50%;
         }
     }
 
     .form-block ~ .form-block {
         margin-top: 30px;
         
-        @include breakpoint(xl) {
+        @include breakpoint(lg) {
             margin-top: 0;
             margin-left: 20px;
         }

@@ -1,20 +1,26 @@
-mixin breadcrumbs(...items)
+mixin breadcrumbs(title, ...items)
 
-    .breadcrumbs
+    .head-banner
 
-        .breadcrumbs-inner
+        .container
 
-            .breadcrumbs-wrapper
+            .breadcrumbs
 
-                .breadcrumbs-item
-                    a(href='/') Главная
+                .breadcrumbs-inner
 
-                each item in items
+                    .breadcrumbs-wrapper
 
-                    if item == items[items.length - 1]
                         .breadcrumbs-item
-                            span= item
+                            a(href='/') Главная
 
-                    else
-                        .breadcrumbs-item
-                            a(href="#")= item
+                        each item in items
+
+                            if item == items[items.length - 1]
+                                .breadcrumbs-item
+                                    span= item
+
+                            else
+                                .breadcrumbs-item
+                                    a(href="#")= item
+
+            h1.title= title

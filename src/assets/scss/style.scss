@@ -4,6 +4,9 @@
 @import 'base/reset';
 @import 'base/ui';
 
+
+@import 'plugins/animate.min';
+@import 'plugins/swiper-bundle';
 @import '@fancyapps/ui/src/Fancybox/fancybox.scss';
 
 @import 'includes/header';
@@ -13,3 +16,4 @@
 @import 'components/popup';
 
 @import 'pages/index';
+@import 'pages/about';

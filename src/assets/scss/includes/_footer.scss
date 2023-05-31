@@ -1,0 +1,147 @@
+.footer {
+    background: #061F51;
+}
+
+.footer__inner {
+    padding: 34px 0;
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.footer__menu {
+    
+    @include breakpointMax(lg) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 360px;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 2);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(100% / 12 * 3);
+    }
+}
+
+.footer__menu-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.footer__menu-link ~ .footer__menu-link {
+
+    @include breakpoint(lg) {
+        margin-top: 12px;
+    }
+}
+
+.footer__text {
+    
+    @include breakpointMax(lg) {
+        margin-top: 36px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: -12px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: calc(100% / 12 * 7);
+        height: 116px;
+    }
+}
+
+.footer__text p {
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.footer__text p::before {
+    content: '';
+    margin-right: 16px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #C4A43B;
+}
+
+.footer__contacts {
+    
+    @include breakpointMax(lg) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 2);
+    }
+}
+
+.footer__contacts-item {
+    display: flex;
+    align-items: center;
+}
+
+.footer__contacts-item ~ .footer__contacts-item {
+    margin-top: 12px;
+}
+
+.footer__contacts-item p,
+.footer__contacts-item a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #fff;
+}
+
+.footer__contacts-item i {
+    margin-right: 15px;
+    width: 20px;
+    color: #C4A43B;
+}
+
+.footer__contacts-ask {
+    cursor: pointer;
+}
+
+.footer__bottom {
+    padding: 30px 0 36px;
+    border-top: 1px solid #757575;
+
+    @include breakpoint(lg) {
+        padding: 36px 0;
+    }
+}
+
+.footer__row {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.footer__row div {
+    font-size: 14px;
+    line-height: 140%;
+    color: #C8C8C8;
+}
+
+.footer__row div ~ div {
+    
+    @include breakpointMax(lg) {
+        margin-top: 10px;
+    }
+}

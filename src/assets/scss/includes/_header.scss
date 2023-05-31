@@ -18,7 +18,11 @@
 .header.header-fixed {
     padding: 15px 0;
     background: #fff;
+    position: fixed;
     top: -105px;
+    left: 0;
+    width: 100%;
+    z-index: 9;
 }
 
 .header.header-backscroll {
@@ -96,13 +100,19 @@
         margin-left: 30px;
         grid-area: b;
         display: flex;
-        color: #fff;
         border-bottom: 1px solid #ABB8D0;
     }
 
     @include breakpoint(xl) {
         margin-left: 0;
         padding-bottom: 12px;
+    }
+
+    .main-page & {
+
+        @include breakpoint(lg) {
+            color: #fff;
+        }
     }
 
     .header-fixed & {
@@ -405,11 +415,17 @@
         flex-wrap: wrap;
         flex-direction: column;
         height: 58px;
-        color: #fff;
     }
 
     @include breakpoint(xl) {
         margin-top: 18px;
+    }
+
+    .main-page & {
+
+        @include breakpoint(lg) {
+            color: #fff;
+        }
     }
 
     .header-fixed & {

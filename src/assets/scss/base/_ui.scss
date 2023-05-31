@@ -92,6 +92,7 @@ main {
 }
 
 section {
+    position: relative;
     overflow: hidden;
 }
 
@@ -217,5 +218,17 @@ section {
 
     @include breakpoint(lg) {
         font-size: 50px;
+    }
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #061F51;
+
+    @include breakpoint(lg) {
+        font-size: 48px;
     }
 }
