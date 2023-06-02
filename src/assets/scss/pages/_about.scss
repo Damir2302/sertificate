@@ -1,0 +1,47 @@
+.about__banner {
+    margin-top: 45px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 140%;
+    color: #061F51;
+    border: 1px solid #0A3282;
+
+    @include breakpoint(lg) {
+        margin-top: 80px;
+        padding: 40px;
+    }
+}
+
+.section-about {
+    padding-bottom: 0;
+
+    .services-clients {
+        margin-top: 45px;
+
+        @include breakpoint(lg) {
+            margin-top: 80px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 100px;
+        }
+    }
+
+}
+
+.about-page {
+    
+    .section-question {
+        padding-top: 0;
+        margin-top: 60px;
+
+        @include breakpoint(lg) {
+            margin-top: 80px;
+        }
+
+        @include breakpoint(xl) {
+            margin-top: 100px;
+        }
+    }
+
+}

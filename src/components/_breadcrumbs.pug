@@ -6,21 +6,21 @@ mixin breadcrumbs(title, ...items)
 
             .breadcrumbs
 
-                .breadcrumbs-inner
+                .breadcrumbs-inner.swiper
 
-                    .breadcrumbs-wrapper
+                    .breadcrumbs-wrapper.swiper-wrapper
 
-                        .breadcrumbs-item
+                        .breadcrumbs-item.swiper-slide
                             a(href='/') Главная
 
                         each item in items
 
                             if item == items[items.length - 1]
-                                .breadcrumbs-item
+                                .breadcrumbs-item.swiper-slide
                                     span= item
 
                             else
-                                .breadcrumbs-item
+                                .breadcrumbs-item.swiper-slide
                                     a(href="#")= item
 
             h1.title= title

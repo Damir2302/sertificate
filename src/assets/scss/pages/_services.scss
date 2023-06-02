@@ -1,0 +1,244 @@
+.section-services {
+    padding: 60px 0 0;
+
+    @include breakpoint(lg) {
+        padding: 80px 0 0;
+    }
+}
+
+.section-services-inner {
+    padding-bottom: 60px;
+}
+
+.services-main {
+    margin-top: 60px;
+}
+
+.services-wrap {
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.services-main h2 {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #0A3282;
+}
+
+.services-main__links a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 140%;
+    color: #0A3282;
+}
+
+.services-main__links a ~ a {
+    margin-top: 20px;
+}
+
+.services-main__links a:before {
+    content: '\f14c';
+    margin-right: 21px;
+    display: inline-block;
+    font-family: $icon;
+    font-size: 16px;
+    line-height: 140%;
+    color: #A0915F;
+}
+
+.services__about {
+    margin-top: 60px;
+}
+
+.services-main__content {
+    padding: 40px 20px;
+    border: 1px solid #E3E3E3;
+}
+
+.services__advantages {
+    margin-top: 30px;
+    padding: 34px 50px;
+    background: #F7F7F7;
+}
+
+.services__advantages-item {
+    text-align: center;
+}
+
+.services__advantages-item ~ .services__advantages-item {
+    margin-top: 30px;
+}
+
+.services-aside {
+    margin-top: 60px;
+}
+
+.aside__link {
+    border: 1px solid #E3E3E3;
+}
+
+.aside__link ~ .aside__link {
+    margin-top: 10px;
+}
+
+.aside__link a {
+    padding: 16px;
+    display: block;
+    font-size: 14px;
+    line-height: 140%;
+    color: #061F51;
+}
+
+.aside-support {
+    margin-top: 40px;
+    padding: 30px 30px 40px;
+    background: url('../images/building.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.aside-support::before {
+    content: '';
+    background: linear-gradient(0deg, rgba(6, 31, 81, 0.75), rgba(6, 31, 81, 0.75));
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.aside-support__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aside-support__title {
+    margin-bottom: 18px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.aside-support__subtitle {
+    margin-bottom: 24px;
+    font-size: 12px;
+    line-height: 140%;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.aside-support__form .input-style {
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    width: 185px;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+}
+
+.aside-support__form .input-style ~ .input-style {
+    margin-top: 10px;
+}
+
+.aside-support__form input {
+    padding: 16px;
+    background: transparent;
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+.aside-support__form input::placeholder {
+    color: #fff;
+}
+
+.aside-support__form button {
+    width: 185px;
+}
+
+.aside-support__form .checkbox-style {
+    margin: 18px auto;
+    width: 185px;
+}
+
+.aside-support__form .checkbox-style input {
+    display: none;
+}
+
+.aside-support__form .checkbox-style label {
+    display: flex;
+    font-size: 12px;
+    line-height: 140%;
+    color: #fff;
+    user-select: none;
+}
+
+.aside-support__form .checkbox-style label::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    font-family: $icon;
+    font-weight: 900;
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+.aside-support__form .checkbox-style input:checked + label::before {
+    content: '\f00c';
+    font-family: $icon;
+    font-weight: 900;
+}
+
+.aside-contacts {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.aside-contacts__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #061F51;
+}
+
+.aside-contacts-item {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.aside-contacts-ask {
+    cursor: pointer;
+}
+
+.aside-contacts-item i {
+    margin-right: 15px;
+    width: 2rem;
+    color: #c4a43b;
+}

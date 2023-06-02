@@ -5,7 +5,7 @@ $(document).ready(function() {
 
    // HEADER FIXED
    $(window).on('scroll', function() {
-      if ($(window).scrollTop() > $('header').height()) {
+      if ($(window).scrollTop() > $('header').height() - 50) {
         $('header').addClass('header-fixed')
       } else if ($(window).scrollTop() == 0) {
         $('header').removeClass('header-fixed')
@@ -30,7 +30,8 @@ $(document).ready(function() {
     let clientSliderInit
     
     function clientSliderRun() {
-        if ($(window).width() < 744) {
+        if ($('.services-clients').length) {
+          if ($(window).width() < 744) {
             if(!clientSliderInit) {
               clientSliderInit = true
               clientSlider = new Swiper(`.services-clients .swiper`, {
@@ -40,11 +41,12 @@ $(document).ready(function() {
                     slidesOffsetAfter: 0
                 })
             }
-        } else {
-            if (typeof clientSlider !== "undefined") {
-              clientSliderInit = false
-              clientSlider.destroy()
-            }
+          } else {
+              if (typeof clientSlider !== "undefined") {
+                clientSliderInit = false
+                clientSlider.destroy()
+              }
+          }
         }
     }
     
@@ -55,7 +57,6 @@ $(document).ready(function() {
     })
 
     // REVIEWS SLIDER
-    
     let reviewsSlider = new Swiper(`.reviews .swiper`, {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -77,6 +78,36 @@ $(document).ready(function() {
           spaceBetween: 30,
         }
       }
+    })
+
+    // BREADCRUMBS
+    let breadcrumbsSlider
+    let breadcrumbsSliderInit
+    
+    function breadcrumbsSliderRun() {
+        if ($('.breadcrumbs-inner').length) {
+          if ($(window).width() < 744) {
+            if(!breadcrumbsSliderInit) {
+              breadcrumbsSliderInit = true
+              breadcrumbsSlider = new Swiper(`.breadcrumbs-inner.swiper`, {
+                    slidesPerView: 'auto',
+                    freeMode: true,
+                    slidesOffsetAfter: 0
+                })
+            }
+          } else {
+              if (typeof breadcrumbsSlider !== "undefined") {
+                breadcrumbsSliderInit = false
+                breadcrumbsSlider.destroy()
+              }
+          }
+        }
+    }
+    
+    breadcrumbsSliderRun()
+
+    $(window).on('resize', function() {
+      breadcrumbsSliderRun()
     })
 
 })

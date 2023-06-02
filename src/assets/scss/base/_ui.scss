@@ -46,15 +46,33 @@ main {
     }
 }
 
+body:not(.main-page) main {
+    margin-top: var(--headerHeight);
+
+    @include breakpoint(xl) {
+        --headerHeight: 160px;
+    }
+}
+
 .hide {
     display: none !important;
 }
 
 #page {
+    --headerHeight: 123px;
+
     position: relative;
     min-width: 375px;
     min-height: 100%;
     max-width: 100%;
+
+    @include breakpoint(lg) {
+        --headerHeight: 189px;
+    }
+
+    @include breakpoint(xl) {
+        --headerHeight: 137px;
+    }
 }
 
 #page::before {

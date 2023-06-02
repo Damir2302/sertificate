@@ -82,6 +82,9 @@
     
     @include breakpointMax(lg) {
         margin-top: 30px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     @include breakpoint(lg) {

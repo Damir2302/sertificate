@@ -1,0 +1,91 @@
+---
+title: EuroSertium-U | Услуги
+bodyClass: services-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Услуги', 'Услуги')
+    
+    section.section-services
+
+        .container
+
+            .services
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-1.png", alt="img")
+                    .services__item-title Сертификация продукции и услуг
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-2.png", alt="img")
+                    .services__item-title Декларирование продукции
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-3.png", alt="img")
+                    .services__item-title Свидетельства и заключения
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-4.png", alt="img")
+                    .services__item-title Разработка тех документации
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-5.png", alt="img")
+                    .services__item-title Лицензирование деятельности
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-6.png", alt="img")
+                    .services__item-title Отказные письма
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-7.png", alt="img")
+                    .services__item-title Регистрация
+
+                .services__item
+                    .services__item-img
+                        img(src="assets/images/serv-8.png", alt="img")
+                    .services__item-title Технические регламенты
+
+            .services-clients
+
+                .swiper
+
+                    .swiper-wrapper
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/tinkoff.png", alt="img")
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/gazprom.png", alt="img")
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/ross.png", alt="img")
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/pro.png", alt="img")
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/merlion.png", alt="img")
+
+                        .services-clients__item.swiper-slide
+                            img(src="assets/images/rzhd.png", alt="img")
+
+    section.section-question
+
+        .container
+
+            .question
+
+                .question__title Есть вопросы?
+                .question__text Наши специалисты бесплатно помогут, сориентировав вас в правильном направлении
+                .question__btn.btn.btn--fill-brown(data-src="#popup-questions" data-fancybox) Обсудить задачу
