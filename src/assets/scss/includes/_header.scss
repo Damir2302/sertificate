@@ -450,7 +450,7 @@
     }
 }
 
-.header__text p {
+.header__text a {
 
     @include breakpoint(lg) {
         margin-top: 12px;
@@ -463,7 +463,7 @@
     }
 }
 
-.header__text p::before {
+.header__text a::before {
     content: '';
     margin-right: 16px;
     display: inline-block;

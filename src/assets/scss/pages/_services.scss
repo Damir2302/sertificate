@@ -8,10 +8,18 @@
 
 .section-services-inner {
     padding-bottom: 60px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 80px;
+    }
 }
 
 .services-main {
     margin-top: 60px;
+
+    @include breakpoint(xl) {
+        margin-top: 80px;
+    }
 }
 
 .services-wrap {
@@ -28,6 +36,12 @@
     line-height: 130%;
     text-transform: uppercase;
     color: #0A3282;
+}
+
+.services-main__links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .services-main__links a {
@@ -54,17 +68,38 @@
 
 .services__about {
     margin-top: 60px;
+
+    @include breakpoint(lg) {
+        margin-top: 80px;
+    }
 }
 
 .services-main__content {
     padding: 40px 20px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #595959;
     border: 1px solid #E3E3E3;
+
+    @include breakpoint(lg) {
+        padding: 40px;
+    }
 }
 
 .services__advantages {
     margin-top: 30px;
     padding: 34px 50px;
     background: #F7F7F7;
+
+    @include breakpoint(lg) {
+        margin-top: 80px;
+        padding: 34px 0;
+        display: flex;
+    }
+
+    @include breakpoint(xl) {
+        padding: 34px 51px;
+    }
 }
 
 .services__advantages-item {
@@ -72,15 +107,45 @@
 }
 
 .services__advantages-item ~ .services__advantages-item {
-    margin-top: 30px;
+    
+    @include breakpointMax(lg) {
+        margin-top: 30px;
+    }
+}
+
+.advantages__item-title {
+
+    @include breakpoint(lg) {
+        font-size: 15px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
 }
 
 .services-aside {
     margin-top: 60px;
+
+    @include breakpoint(lg) {
+        margin-left: 24px;
+        flex-shrink: 0;
+        width: 226px;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 80px;
+        margin-left: 35px;
+        width: 278px;
+    }
 }
 
 .aside__link {
     border: 1px solid #E3E3E3;
+}
+
+.aside__link.active {
+    border-color: #C4A43B;
 }
 
 .aside__link ~ .aside__link {
@@ -102,6 +167,15 @@
     background-size: cover;
     background-position: center;
     position: relative;
+
+    @include breakpoint(lg) {
+        padding: 30px 0 40px;
+        width: 226px;
+    }
+
+    @include breakpoint(xl) {
+        width: 278px;
+    }
 }
 
 .aside-support::before {

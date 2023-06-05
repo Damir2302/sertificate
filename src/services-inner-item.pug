@@ -1,0 +1,87 @@
+---
+title: EuroSertium-U | Сертификат СТ 1 и другие формы сертификации
+bodyClass: services-inner-page
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Сертификат СТ 1 и другие формы сертификации', 'Услуги', 'Сертификация продукции и услуг', 'Сертификат СТ 1 и другие формы сертификации')
+
+    section.section-services-inner
+
+        .container
+
+            .services-wrap
+
+                .services-main
+
+                    .services-main__block
+                        p Документ, который подтверждает происхождение товара, - международная формальность? Вовсе нет.
+                          |Документ используется для оформления продукции на таможне, именно благодаря этой «формальности» товары принимаются в стране назначения и облагаются ставкой таможенной пошлины. Причём в большинстве случаев сертификат предоставляет значительные преференции и позволяет сократить расходы.
+
+                        .services-main__block-img
+                            i.fal.fa-stamp
+                            p Сертификат происхождения форма СТ1
+
+                    .services-order
+                        p Документ под ключ
+                        p от 7 000 руб.
+                        .btn.btn--fill-blue Оформить заявку
+
+                .services-aside
+
+                    .services-aside__wrap
+
+                            .aside
+                                .aside__link.active
+                                    a(href="#") Сертификация продукции и услуг
+                                .aside__link    
+                                    a(href="#") Декларирование продукции
+                                .aside__link    
+                                    a(href="#") Свидетельства и заключения      
+                                .aside__link    
+                                    a(href="#") Разработка тех документации     
+                                .aside__link    
+                                    a(href="#") Лицензирование деятельности
+                                .aside__link    
+                                    a(href="#") Отказные письма
+                                .aside__link    
+                                    a(href="#") Регистрация
+                                .aside__link    
+                                    a(href="#") Технические регламенты
+                            
+                            .aside-support
+
+                                .aside-support__wrap
+                                    .aside-support__title нужна помощь?
+                                    .aside-support__subtitle Просто введите имя и телефон
+
+                                    .aside-support__form
+                                        form
+                                            .input-style
+                                                input(type="text" placeholder="Как вас зовут?" required)
+                                            .input-style
+                                                input(type="tel" placeholder="+7 (___) ___-__-__" required)
+                                            .checkbox-style
+                                                input#agree(type="checkbox", name="agreement" checked)
+                                                label(for="agree")
+                                                    p Согласен на обработку персональных данных
+                                            button.btn.btn--fill-brown(type="submit")  Оформить заявку
+
+                            .aside-contacts
+                                .aside-contacts__title контакты
+
+                                .aside-contacts-item.aside-contacts-phone
+                                    i.fal.fa-phone
+                                    a(href="tel:8 (495) 181 00 16") 8 (495) 181 00 16
+
+                                .aside-contacts-item.aside-contacts-email
+                                    i.fal.fa-envelope
+                                    a(href="mailto:info@e-s-u.ru") info@e-s-u.ru
+
+                                .aside-contacts-item.aside-contacts-ask
+                                    i.fal.fa-comments
+                                    p(data-src="#popup-questions" data-fancybox) Задать вопрос
