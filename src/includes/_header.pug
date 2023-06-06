@@ -20,7 +20,7 @@ block header
                     .header__nav
                         .header__nav-link(class= bodyClass == 'about-page' ? 'active' : '')
                             a(href="about.html") О компании
-                        .header__nav-link(class= bodyClass == 'services-page' ? 'active' : '')
+                        .header__nav-link(class= bodyClass == 'services-page' || activeClass == 'active' ? 'active' : '')
                             a(href="services.html") Услуги
                         .header__nav-link(class= bodyClass == 'news-page' ? 'active' : '')
                             a(href="news.html") Новости

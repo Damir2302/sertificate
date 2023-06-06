@@ -125,6 +125,7 @@ section {
     transition: all .4s ease;
     border: 1px solid transparent;
     cursor: pointer;
+    user-select: none;
 }
 
 .btn--fill-brown {

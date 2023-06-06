@@ -1,4 +1,4 @@
-.section-services {
+.services-page .section-services {
     padding: 60px 0 0;
 
     @include breakpoint(lg) {
@@ -26,6 +26,14 @@
 
     @include breakpoint(lg) {
         display: flex;
+        justify-content: space-between;
+    }
+}
+
+.services-main {
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 9 - 12px);
     }
 }
 
@@ -128,14 +136,12 @@
     margin-top: 60px;
 
     @include breakpoint(lg) {
-        margin-left: 24px;
         flex-shrink: 0;
         width: 226px;
     }
 
     @include breakpoint(xl) {
         margin-top: 80px;
-        margin-left: 35px;
         width: 278px;
     }
 }
@@ -315,4 +321,220 @@
     margin-right: 15px;
     width: 2rem;
     color: #c4a43b;
+}
+
+.services-inner-item-page {
+
+    .services-main h2 {
+        font-size: 30px;
+    }
+
+    .services-main h4 {
+        margin: 30px 0;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #0A3282;
+    }
+
+    .services-main h5 {
+        margin-top: 40px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #061F51;
+    }
+
+    .services-main ul {
+        margin-top: 40px;
+    }
+
+    .services-main ul li {
+        display: flex;
+        font-size: 16px;
+        line-height: 140%;
+        color: #061F51;
+    }
+
+    .services-main ul li ~ li {
+        margin-top: 20px;
+    }
+
+    .services-main ul li::before {
+        content: '\e426';
+        margin-right: 21px;
+        font-family: $icon;
+        font-size: 16px;
+        line-height: 140%;
+        color: #A0915F;
+    }
+    
+    .services-main__block {
+
+        @include breakpoint(lg) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .services-main__block p {
+        font-size: 20px;
+        line-height: 140%;
+        color: #061F51;
+
+        @include breakpoint(lg) {
+            width: calc(100% / 9 * 5 - 10px);
+        }
+    }
+
+    .services-main__block-img {
+        margin-top: 50px;
+        background: url('../images/closeup-business-woman-making-notes-document.jpg') no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 320px;
+        text-align: center;
+        border: 3px solid #A0915F;
+
+        @include breakpoint(lg) {
+            margin-top: 0;
+            width: 308px;
+        }
+    }
+
+    .services-main__block-img::before {
+        content: '';
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.84));
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .services-main__block-img i {
+        position: relative;
+        font-size: 48px;
+        line-height: 48px;
+        color: #A0915F;
+    }
+
+    .services-main__block-img span {
+        margin: 50px auto 0;
+        position: relative;
+        display: block;
+        max-width: 270px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        text-align: center;
+        text-transform: uppercase;
+        color: #0A3282;
+    }
+
+    .services-order {
+        margin-top: 26px;
+        padding: 26px 16px 30px;
+        background: #F7F7F7;
+
+        @include breakpoint(lg) {
+            margin-top: 40px;
+            padding: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .services-order__title {
+        margin-bottom: 25px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #0A3282;
+
+        @include breakpoint(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    .services-order__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services-order__right p {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%;
+    }
+
+    .services-order__right .btn {
+
+        @include breakpoint(lg) {
+            margin-left: 56px;
+            width: 175px;
+        }
+    }
+
+    .services-content {
+        margin-top: 40px;
+        line-height: 140%;
+        color: #595959;
+    }
+
+    .services-content-block {
+        margin-top: 60px;
+    }
+
+    .services-content-block h2 {
+        
+        @include breakpoint(lg) {
+            max-width: 610px;
+        }
+    }
+
+    .services-content-block p {
+        font-size: 16px;
+        line-height: 140%;
+        color: #595959;
+    }
+
+    .block-wrap {
+        padding: 20px;
+        border: 1px solid #E3E3E3;
+
+        @include breakpoint(lg) {
+            padding: 40px;
+        }
+    }
+
+    .services-reviews {
+        margin-top: 40px;
+        overflow: hidden;
+    }
+
+    .reviews__head {
+        
+        @include breakpoint(lg) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .reviews__title  {
+
+        @include breakpoint(lg) {
+            margin-bottom: 0;
+        }
+    }
+
 }
