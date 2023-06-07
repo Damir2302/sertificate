@@ -1,0 +1,154 @@
+.section-contacts {
+    padding-top: 40px;
+
+    @include breakpoint(lg) {
+        padding-top: 50px;
+    }
+
+    @include breakpoint(xl) {
+        padding-top: 60px;
+    }
+}
+
+.contacts {
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.contacts p,
+.contacts a {
+    font-size: 16px;
+    line-height: 140%;
+    color: #595959;
+}
+
+.contacts h4 {
+    margin: 40px 0 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        max-width: 390px;
+        font-size: 24px;
+    }
+}
+
+.contacts__main {
+
+    @include breakpoint(lg) {
+        width: calc(100% / 12 * 5 - 140px);
+    }
+}
+
+.c-contact-row {
+    display: flex;
+}
+
+.c-contact-row ~ .c-contact-row {
+    margin-top: 26px;
+}
+
+.c-contact-row p:first-child {
+    flex-shrink: 0;
+    width: 170px;
+    color: #222;
+}
+
+.contacts__requisites {
+    margin-top: 50px;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        margin-left: 100px;
+        width: calc(100% / 12 * 6);
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 180px;
+    }
+}
+
+.contacts__requisites h3 {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 36px;
+    }
+}
+
+.section-map {
+    padding: 40px 0 50px;
+    height: 300px;
+    box-sizing: content-box;
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 50px 0 80px;
+    }
+}
+
+#map {
+    border: 3px solid #A0915F;
+}
+
+.section-map .container {
+    height: 100%;
+}
+
+.contacts-page {
+
+    .section-form {
+        background: #F7F7F7;
+    }
+
+    .section-form::before {
+        content: none;
+    }
+
+    .section-title {
+        color: #0A3282;
+    }
+
+    .form-info__subtitle {
+        color: #222;
+    }
+
+    .section-form .form label {
+        color: #222;
+    }
+
+    .section-form .form input {
+        background: #fff;
+    }
+
+    .section-form .form input,
+    .section-form .form input::placeholder {
+        color: #595959;
+    }
+
+    .section-form .textarea-style textarea {
+        background: #fff;
+        color: #595959;
+    }
+    
+    .section-form .textarea-style textarea::placeholder {
+        color: #595959;
+    }
+
+    .section-form .form .btn {
+        background: #222;
+        color: #fff;
+    }
+
+}

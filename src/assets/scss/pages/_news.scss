@@ -19,6 +19,10 @@
     border: 1px solid #A0915F;
     border-radius: 3px; 
     cursor: pointer;
+
+    @include breakpoint(lg) {
+        width: 175px;
+    }
 }
 
 .tabs__item ~ .tabs__item {
@@ -33,26 +37,73 @@
 
 .tabs__item a {
     padding: 16px 30px;
+
+    @include breakpoint(lg) {
+        padding: 16px 0;
+        display: block;
+        text-align: center;
+    }
 }
 
 .news {
     margin-top: 60px;
+
+    @include breakpoint(lg) {
+        margin-top: -28px;
+        margin-left: -20px;
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(xl) {
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+}
+
+.news__item {
+
+    @include breakpoint(lg) {
+        margin-top: 28px;
+        margin-left: 20px;
+        width: calc(100% / 3 - 20px);
+    }
+
+    @include breakpoint(xl) {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: calc(100% / 3 - 30px);
+    }
 }
 
 .news__item ~ .news__item {
-    margin-top: 10px;
+    
+    @include breakpointMax(lg) {
+        margin-top: 10px;
+    }
 }
 
 .news__item a {
     padding: 14px;
     background: #F7F7F7;
     display: flex;
+
+    @include breakpoint(lg) {
+        padding: 20px 20px 28px;
+        display: block;
+    }
 }
 
 .news__item-img {
     flex-shrink: 0;
     width: 97px;
     height: 73px;
+
+    @include breakpoint(lg) {
+        width: auto;
+        height: auto;
+    }
 }
 
 .news__item-img img {
@@ -62,10 +113,20 @@
 
 .news__item-desc {
     margin-left: 10px;
+
+    @include breakpoint(lg) {
+        margin-left: 0;
+    }
 }
 
 .news__item-date {
+    font-size: 14px;
+    line-height: 140%;
     color: #595959;
+
+    @include breakpoint(lg) {
+        margin-top: 26px;
+    }
 }
 
 .news__item-date::before {
@@ -88,4 +149,88 @@
     color: #061F51;
 
     @include textLimit(2);
+
+    @include breakpoint(lg) {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+}
+
+.news__bottom {
+
+    @include breakpoint(lg) {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.news__nav {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+    }
+}
+
+.news__request {
+    width: 175px;
+}
+
+.news__count {
+    margin-left: 50px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #919191;
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+    }
+}
+
+.news__pagination {
+    margin-top: 24px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 340px;
+    border: 1px solid #E3E3E3;
+    border-radius: 2px;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        width: 380px;
+        max-width: unset;
+    }
+}
+
+.news__pagination-nav {
+    color: #0A3282;
+    user-select: none;
+}
+
+.news__pagination-nav.disabled {
+    color: #919191;
+    pointer-events: none;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+}
+
+.pagination__link {
+    color: #919191;
+}
+
+.pagination__link ~ .pagination__link {
+    margin-left: 20px;
+}
+
+.pagination__link.active {
+    color: #0A3282;
 }

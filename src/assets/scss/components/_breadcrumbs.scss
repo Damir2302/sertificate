@@ -24,6 +24,10 @@
     padding-bottom: 16px;
     text-align: center;
     user-select: none;
+
+    .news-inner-page & {
+        padding-bottom: 0;
+    }
 }
 
 .breadcrumbs-wrapper {

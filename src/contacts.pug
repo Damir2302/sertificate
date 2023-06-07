@@ -1,0 +1,108 @@
+---
+title: EuroSertium-U | Контакты
+bodyClass: contacts-page
+yandexMap: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('Контакты', 'Контакты')
+
+    section.section-contacts
+
+        .container
+
+            .contacts
+
+                .contacts__main
+                    p ООО «ЕВРОСЕРТИУМ-Ю» Eurosertium-U.Ltd
+
+                    h4 Юридический и фактический адрес:
+                    p РФ, Московская область, г. Балашиха,мкр. Никольско – Архангельский,Разинское шоссе, дом 5, офис 223, БЦ «Вешняки».
+                    
+                    h4 Контакты
+                    .c-contact-row
+                        p Телефон:
+                        a(href="tel:+7(495)181-00-16") +7 (495) 181-00-16
+                    .c-contact-row
+                        p E-mail:
+                        a(href="mailto:info@e-s-u.ru") info@e-s-u.ru
+                    .c-contact-row
+                        p Режим работы: 
+                        p Пн-Пт: с 8:00 до 18:00 Сб-Вс: выходной
+
+                .contacts__requisites
+                    h3 Реквизиты
+                    p ООО «Евросертиум-Ю» / Eurosertium-U. Ltd
+                      br
+                      |ИНН/КПП 5001010434/500101001
+                      br
+                      |ОГРН 1155001000330
+                      br
+                      br
+                      |Расчётный счёт RUB 40702.810.8.40000004441
+                      br
+                      |Корреспондентский счёт 30101.810.4.00000000225
+                      br
+                      |БИК 044525225
+                      br
+                      |Банк: ПАО «Сбербанк» г. Москва.
+                      br
+                      |Account: USD ($) № 40702.840.3.40000000892
+                      br
+                      |Account : EUR (€) № 40702.978.7.40000001130
+                      br
+                      |Bank: SBERBANK (SREDNERUSSKY HEAD OFFICE)
+                      br
+                      |Address: RUSSIAN FEDERATION, MOSCOW, ANDRONIEVSKAYA UL. 8 B.
+
+    section.section-map
+
+        .container
+
+            style.
+                [class*="ymaps-2-1"][class*="-ground-pane"] {
+                    -webkit-filter: grayscale(100%);
+                }
+            #map(style="width:100%;height:100%;")
+
+    section.section-form
+
+        .container
+            
+            .popup-questions.form-container
+
+                .form-info
+                    .form-info__title.section-title Остались вопросы?
+                    .form-info__subtitle Воспользуйтесь формой , чтобы задать ваш вопрос, оставить предложение или отзыв.
+
+                .form
+                    form
+                        .form-wrap
+                            .form-block
+                                .input-style
+                                    label Ваше имя
+                                    input(type="text" placeholder="Представьтесь" autocomplete="off" required)
+                                
+                                .input-style
+                                    label Телефон
+                                    input(type="tel" required autocomplete="off" placeholder="+7")
+                                
+                                .input-style
+                                    label E-mail
+                                    input(type="email" required autocomplete="off" placeholder="Введите ваш E-mail")
+                            
+                            .form-block
+                                .textarea-style
+                                    label Вопрос
+                                    textarea(placeholder="Введите текст" required)
+
+                                .agreement.checkbox-style
+                                    input#agreement_3(type="checkbox" name="agreement_3" checked)
+                                    label(for="agreement_3")
+                                        span Даю согласие на обработку <a href="#">персональных данных</a>
+
+                                button.btn(type="submit") Отправить данные

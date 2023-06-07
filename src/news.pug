@@ -130,15 +130,15 @@ block main
             .news__bottom
 
                 .news__nav
-                    .news__request.btn.btn--fill-blue Оформить заявку
+                    .news__request.btn.btn--fill-blue(data-src="#popup-callback" data-fancybox) Оформить заявку
                     .news__count 12 из 24 новостей
 
                 .news__pagination
-                    .news__pagination-nav.news__pagination-nav--prev
+                    .news__pagination-nav.news__pagination-nav--prev.disabled
                         a(href="#") Пред
 
                     .pagination
-                        .pagination__link
+                        .pagination__link.active
                             a(href="#") 1
                         .pagination__link
                             a(href="#") 2
