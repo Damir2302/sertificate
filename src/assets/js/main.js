@@ -12,17 +12,6 @@ $(document).ready(function() {
         $('header').removeClass('header-backscroll')
       }
     })
-    
-    let lastScrollTop = 0;
-    $(window).scroll(function(){
-        let currentScroll = $(this).scrollTop()
-        if (currentScroll > lastScrollTop){
-            $('.header-fixed').removeClass('header-backscroll')
-        } else {
-            $('.header-fixed').addClass('header-backscroll')
-        }
-        lastScrollTop = currentScroll
-    })
 
 
     // CLIENTS IMG SLIDER MOBILE

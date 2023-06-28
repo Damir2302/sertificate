@@ -22,15 +22,11 @@
     padding: 15px 0;
     background: #fff;
     position: fixed;
-    top: -105px;
+    top: 0;
     left: 0;
     width: 100%;
     height: auto;
     z-index: 9;
-}
-
-.header.header-backscroll {
-    top: 0;
 }
 
 .header__inner {
@@ -470,6 +466,31 @@
     width: 12px;
     height: 12px;
     border: 3px solid #C4A43B;
+}
+
+.header__phone {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+
+    .main-page & {
+        color: #fff;
+    }
+
+    .header-fixed & {
+        color: #000;
+    }
+}
+
+.header__phone i {
+    margin-right: 8px;
+    color: #C4A43B;
 }
 
 .header__menu {
