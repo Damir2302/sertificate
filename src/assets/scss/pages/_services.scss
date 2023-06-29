@@ -47,21 +47,24 @@
 }
 
 .services-main__links {
+    margin-top: -20px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .services-main__links a {
+    margin-top: 20px;
     display: flex;
     align-items: center;
+    width: calc(50% - 20px);
     font-size: 16px;
     line-height: 140%;
     color: #0A3282;
-}
 
-.services-main__links a ~ a {
-    margin-top: 20px;
+    @include breakpoint(lg) {
+        width: calc(100% / 3 - 20px);
+    }
 }
 
 .services-main__links a:before {

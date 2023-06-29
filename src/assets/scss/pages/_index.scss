@@ -395,10 +395,7 @@
 
 .services__item {
     margin-top: 10px;
-    padding: 20px 15px;
     background: #F7F7F7;
-    display: flex;
-    align-items: center;
     user-select: none;
     cursor: default;
     transition: all .4s ease;
@@ -408,7 +405,6 @@
 
         margin-top: var(--gap);
         margin-left: var(--gap);
-        padding: 20px;
         width: calc(50% - var(--gap));
     }
 
@@ -416,6 +412,16 @@
         --gap: 30px;
 
         margin-top: 20px;
+    }
+}
+
+.services__item a {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(md) {
+        padding: 20px;
     }
 }
 
